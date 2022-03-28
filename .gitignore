@@ -23,5 +23,5 @@
 hs_err_pid*
 
 # User Added Files
-.metadata/
+.metadata/*
 */.metadata/
