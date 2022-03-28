@@ -141,3 +141,18 @@ Binding(ALT+COMMAND+R,
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-28 10:56:21.957
 !MESSAGE executing callback sts4.classpath.mSIzqtQk SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-28 11:51:25.210
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-28 11:51:25.214
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-28 11:51:25.214
+!MESSAGE buffering callback sts4.classpath.mSIzqtQk functional demo false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-28 11:51:25.215
+!MESSAGE executing callback sts4.classpath.mSIzqtQk 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-28 11:51:25.232
+!MESSAGE executing callback sts4.classpath.mSIzqtQk SUCCESS [done]
