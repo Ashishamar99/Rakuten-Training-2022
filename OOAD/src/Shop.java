@@ -4,14 +4,20 @@ public class Shop {
 	public static void main(String[] args) {
 		Book b1 = new Book();
 		b1.setPrice(99);
-		System.out.println(b1.getPrice());
+		//System.out.println(b1.getPrice());
 		
 		createBooks();
+		System.out.println("------------------------------------------------");
+		System.out.println("Assignment 1 ->");
+		assignment();
+		
 	}
 
-	private static void createBooks() {
+	private static void assignment() {
+		// TODO Auto-generated method stub
 		Book []shelf = new Book[10];
 		Random rand = new Random();
+		List<Book> listOfBooks = new ArrayList<Book>();
 		// TODO Auto-generated method stub
 		for(int i=0; i<10; i++) {
 			Book ib = new Book();
@@ -21,7 +27,31 @@ public class Shop {
 		
 		for(int i=0;i<10;i++) {
 			System.out.println(shelf[i].getPrice());
+			listOfBooks.add(shelf[i]);
+			
+		}
+		System.out.println("------------------------------------------------");
+		listOfBooks.sort((book1, book2) -> (int) book1.getPrice() - (int) book2.getPrice());
+		listOfBooks.forEach((Book book) -> System.out.println(book.getPrice()) );
+		
+		
 		}
 		
+
+	private static void createBooks() {
+		Book []shelf = new Book[10];
+		Random rand = new Random();
+		List<Book> listOfBooks = new ArrayList<Book>();
+		// TODO Auto-generated method stub
+		for(int i=0; i<10; i++) {
+			Book ib = new Book();
+			ib.setPrice(rand.nextFloat(70, 100));
+			shelf[i] = ib;
+		}
+		
+		for(int i=0;i<10;i++) {
+			System.out.println(shelf[i].getPrice());
+			
+		}
 	}
 }
