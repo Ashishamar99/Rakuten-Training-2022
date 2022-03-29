@@ -31,5 +31,36 @@ public class CalculatorTest {
 		int res = calc.subtract(10, 5);
 		assertEquals(5, res);
 	}
-
+	
+	@Test
+	public void testDivide() {
+		float res = calc.divide(10, 5);
+		assertEquals(2.0, res, 1);
+	}
+	
+	/**
+	 * @Test
+	 * 	public void testDivideWithZero() {
+	 * 	float res = calc.divide(10, 0);
+	 * 	assertEquals(Double.POSITIVE_INFINITY, res, 1);
+	 * 		}
+	 *	}
+	 *
+	 * WE USE "expected" with the "Test" attribute to check for any expected exceptions.
+	 * USE WITHOUT OPENJDK18, AS OPENJDK18 gives divide by 0 as infinity.  
+**/
+	
+	
+	@Test
+	public void testDivideWithZero() {
+		float res = calc.divide(10, 0);
+		assertEquals(Double.POSITIVE_INFINITY, res, 1);
+	}
+	
+	@Test
+	public void testMultiply() {
+		int res = calc.multiply(10, 2);
+		assertEquals(20, res);
+	}
+	
 }
