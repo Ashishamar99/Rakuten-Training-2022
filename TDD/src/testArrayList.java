@@ -1,3 +1,4 @@
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
@@ -13,5 +14,16 @@ public class testArrayList {
 		assertTrue(result);
 		//We can also use assertEquals(1, list.size()) instead os assertTrue.
 		
+	}
+	
+	@Test
+	public void testRemove() {
+		List<String> list = new ArrayList<>();
+		list.add("Ram");
+		list.add("Shaym");
+		list.add("Bhaym");
+		
+		String result = list.remove(2);
+		assertEquals("Bhaym", result);
 	}
 }
