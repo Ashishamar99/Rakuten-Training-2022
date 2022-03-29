@@ -6,7 +6,7 @@ import calc.programs.CalculatorTest;
 import calc.testing.testAddComplete;
 
 @RunWith(Suite.class)
-@SuiteClasses({CalculatorTest.class, testAddComplete.class})
+@SuiteClasses({CalculatorTest.class, testAddComplete.class, testArrayList.class})
 
 
 /* WE WILL ADD ALL THE REQUIRED MULTIPLE TEST CASE FILES
