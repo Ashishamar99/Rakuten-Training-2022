@@ -52,5 +52,15 @@ public class Customer {
 		return counter++;
 	}
 	
+	//Display Customer Info.
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		String customerInfo = String.format("Customer ID: %d\nCustomer Name: %s\nCustomer Address: %s\nCustomer Email: %s\nCustomer Phone: %s", customerID, customerName, customerAddress, customerEmail, customerPhone);
+		return customerInfo;
+	}
+	
+	
+	
 	
 }
