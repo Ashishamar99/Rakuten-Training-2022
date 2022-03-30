@@ -5,6 +5,7 @@ import java.util.*;
 public class HashMapDemo {
 	public static void main(String[] args) {
 		Map<String, Book> books = new HashMap<>();
+		
 		for(int i=0;i<10;i++) {
 			Book book = new Book();
 			book.setTitle("title" + i);
