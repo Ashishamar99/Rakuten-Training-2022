@@ -3,7 +3,7 @@ package classesAndObjectsAssignment;
 public class Customer {
 	private int customerID;
 	private String customerName, customerAddress, customerPhone, customerEmail;
-	private static int counter=999;
+	private static int counter=1000;
 	
 	//Getters and Setters.
 	public int getCustomerID() {
@@ -56,7 +56,7 @@ public class Customer {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		String customerInfo = String.format("Customer ID: %d\nCustomer Name: %s\nCustomer Address: %s\nCustomer Email: %s\nCustomer Phone: %s", customerID, customerName, customerAddress, customerEmail, customerPhone);
+		String customerInfo = String.format("Customer ID: %d\nCustomer Name: %s\nCustomer Address: %s\nCustomer Email: %s\nCustomer Phone: %s\n--------------------------------\n", customerID, customerName, customerAddress, customerEmail, customerPhone);
 		return customerInfo;
 	}
 	

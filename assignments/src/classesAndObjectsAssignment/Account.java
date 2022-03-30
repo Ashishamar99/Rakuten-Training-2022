@@ -1,7 +1,7 @@
 package classesAndObjectsAssignment;
 
 enum TYPE{
-	SB, FD, RD;
+	SB, FD;
 }
 public class Account {
 	
@@ -62,8 +62,7 @@ public class Account {
 	//Displays Account Info.
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		String accountInfo = String.format("Account Number: %d\nCustomer ID: %d\nAccount Type: %s\nAccount Creation Date: %s\nAccount Balance: %f", accountNumber, customer.getCustomerID(), type, openingDate, balance);
+		String accountInfo = String.format("Account Number: %d\nCustomer ID: %d\nAccount Type: %s\nAccount Creation Date: %s\nAccount Balance: %f\n--------------------------------\n", accountNumber, customer.getCustomerID(), type, openingDate, balance);
 		return accountInfo;
 	}
 	
