@@ -2612,3 +2612,18 @@ java.util.concurrent.TimeoutException
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2022-03-30 14:36:45.137
 !MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-30 14:44:23.426
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-30 14:44:23.429
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-30 14:44:23.429
+!MESSAGE buffering callback sts4.classpath.qdXwUVmC assignments false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-30 14:44:23.430
+!MESSAGE executing callback sts4.classpath.qdXwUVmC 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-30 14:44:23.481
+!MESSAGE executing callback sts4.classpath.qdXwUVmC SUCCESS [done]
