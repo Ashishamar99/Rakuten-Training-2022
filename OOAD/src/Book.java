@@ -1,3 +1,4 @@
+
 enum STATUS{
 	NEW, DAMAGED, RETURNED
 }
