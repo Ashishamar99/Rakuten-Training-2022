@@ -739,3 +739,7 @@ Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: end tag nam
 2022-03-30 11:46:44,731 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2022-03-30 11:46:51,144 [Worker-25: Launching Executing test in _Users_ashish.amar_Documents_workspace-spring-tool-suite-4-4.14.0.RELEASE_Maven Proejcts_app1] INFO  o.e.m.i.launch.MavenLaunchDelegate - /Users/ashish.amar/Documents/workspace-spring-tool-suite-4-4.14.0.RELEASE/Maven Proejcts/app1
 2022-03-30 11:46:51,144 [Worker-25: Launching Executing test in _Users_ashish.amar_Documents_workspace-spring-tool-suite-4-4.14.0.RELEASE_Maven Proejcts_app1] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B test -Dstyle.color=always
+2022-03-30 13:32:01,271 [Worker-35: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-03-30 13:32:01,275 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-03-30 13:32:01,277 [Worker-35: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-03-30 13:32:01,277 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
