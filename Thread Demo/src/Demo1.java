@@ -19,7 +19,6 @@ class Worker extends Thread{
 		try {
 			sleep(2000);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		for(int i=0;i<10;i++) {
@@ -33,12 +32,10 @@ class Worker1 implements Runnable{
 
 	@Override
 	public void run() {
-		// TODO Auto-generated method stub
 		for(int i=0; i<10;i++) {
 			try {
 				Thread.sleep(2000);
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			System.out.println(Thread.currentThread().toString() + i + "Runnable");
