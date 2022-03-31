@@ -11,6 +11,17 @@ public class FileHandling {
 		readFileUsingBufferedReaderAndFileReader();
 		readFileUsingScanner();
 		readFileUsingStreams();
+		
+		readFileUsingStreams("input.txt");
+	}
+
+	private static void readFileUsingStreams(String filename) throws FileNotFoundException, IOException {
+		FileReader reader = new FileReader(filename);
+		BufferedReader bufferedReader = new BufferedReader(reader);
+		
+		Stream<String> myStream = bufferedReader.lines();
+		myStream.forEach((line) -> System.out.println(line));
+		
 	}
 
 	private static void readFileUsingStreams() throws FileNotFoundException, IOException {
