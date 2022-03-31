@@ -15,5 +15,7 @@ public class StreamsDemo3 {
 		Stream<Integer> filtered = s1.filter((Integer arg0) -> arg0 > 0);
 		Optional<Integer> reduced = filtered.reduce((Integer previous, Integer current) -> previous + current);
 		System.out.println(reduced.get());
+		//We filter out positive elements from the list, and use a reduce and a lambda function to sum up the list.
+	
 	}
 }
