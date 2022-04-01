@@ -81,7 +81,25 @@
 <input type="file" id="myfile" name="myfile">
 <hr />
 
-<br /> <button onclick="save()"">Save</button>
+<h3><u>Range</u></h3>
+  <label for="vol">Volume (between 0 and 50):</label>
+  <input type="range" id="vol" name="vol" min="0" max="50">
+<hr />
+
+<h5>HTML Forms</h5>
+
+<p >We generally use a form "action" attribute to redirect to a php file for processing, but the same can be achieved using a JS function by using a "onsubmit" attribute.</p>
+<br /><br />
+
+<form onsubmit="display()">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fnameform" name="fname" value="Aaa"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lnameform" name="lname" value="Bbb"><br><br>
+  <input type="submit" value="Submit">
+</form>
+<hr />
+<br /> <button onclick="save()">Save</button>
 </body>
 <script type="text/javascript" src="app.js"></script>
 </html>

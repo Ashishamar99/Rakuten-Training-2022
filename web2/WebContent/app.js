@@ -15,3 +15,7 @@ function save(){
 		}
 	}
 }
+
+function display(){
+	alert(`${document.getElementById('fnameform').value} ${document.getElementById('lnameform').value} is my full name`);
+}
