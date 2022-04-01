@@ -4888,3 +4888,6 @@ Binding(COMMAND+SHIFT+C,
 !ENTRY org.eclipse.lsp4e 4 0 2022-04-01 14:12:45.759
 !MESSAGE [Error]	[tsserver] env: node: No such file or directory
 
+
+!ENTRY org.eclipse.lsp4e 1 0 2022-04-01 14:43:29.367
+!MESSAGE [Log]	Scanner.scan has not advanced at offset 343, state before: 10 after: 4
