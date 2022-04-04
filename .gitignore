@@ -27,22 +27,17 @@ hs_err_pid*
 **.metadata/
 **.settings/
 .classpath
-
-# User Added Files
-# **.metadata/
-# **.settings/
-# .classpath
-# **.plugins/
-# **.projects/
-# *.prefs
-# *.snap
-# *.resources
-# *.prefs
-# *.xmi
-# *.index
-# *.snap
-# *.resources
-# *.prefs
-# *.xmi
+**.plugins/
+**.projects/
+*.prefs
+*.snap
+*.resources
+*.prefs
+*.xmi
+*.index
+*.snap
+*.resources
+*.prefs
+*.xmi
 # **/assignments/
-# **.metadata/
+Module1Assessment/*
