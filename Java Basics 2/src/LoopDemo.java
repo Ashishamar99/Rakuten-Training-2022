@@ -60,9 +60,8 @@ public class LoopDemo {
 	private static void printStarPatternUsingTwoWhileLoops(char pattern, int row)  {
 		String starPattern = "";
 		
-		if(row <= 0) {
-			throw new IllegalArgumentException("Row value should be greater than 0");
-		}
+		Utility.validateRowInput(row);
+		
 		while(row>=1) {
 			int columns = 0;
 			while(columns<row) {
@@ -80,9 +79,8 @@ public class LoopDemo {
 	private static String printStarPatternUsingTwoForLoops(int row) throws IllegalArgumentException {
 		String starPattern = "";
 		
-		if(row <= 0) {
-			throw new IllegalArgumentException("Row value should be greater than 0");
-		}
+		Utility.validateRowInput(row);
+		
 		for(;row>=1;row--) {
 			for(int column=0;column<row;column++)
 				starPattern += "*";
