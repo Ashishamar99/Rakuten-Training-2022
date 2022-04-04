@@ -3,7 +3,6 @@ INDEX VERSION 1.131+/Users/ashish.amar/Documents/workspace-spring-tool-suite-4-4
 2188117527.index
 327120131.index
 1249731543.index
-2847343626.index
 2781951635.index
 3966400146.index
 1865797976.index

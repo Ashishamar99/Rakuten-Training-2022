@@ -3,7 +3,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class ForLoopDemo {
+public class LoopDemo {
 	/**
 	 * 
 	 * @param row
