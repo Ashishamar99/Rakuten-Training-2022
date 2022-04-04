@@ -22,21 +22,27 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
+
 # User Added Files
 **.metadata/
 **.settings/
 .classpath
-**.plugins/
-**.projects/
-*.prefs
-*.snap
-*.resources
-*.prefs
-*.xmi
-*.index
-*.snap
-*.resources
-*.prefs
-*.xmi
+
+# User Added Files
+# **.metadata/
+# **.settings/
+# .classpath
+# **.plugins/
+# **.projects/
+# *.prefs
+# *.snap
+# *.resources
+# *.prefs
+# *.xmi
+# *.index
+# *.snap
+# *.resources
+# *.prefs
+# *.xmi
 # **/assignments/
-**.metadata/
+# **.metadata/
