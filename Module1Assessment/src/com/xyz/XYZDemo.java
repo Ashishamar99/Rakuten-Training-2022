@@ -21,6 +21,7 @@ public class XYZDemo {
 	/*
 	 * Create a hashmap of account numbers (Keys) and accounts (Values) to access them.
 	 * Try out a logic for generating account numbers other than counters. (Maybe)
+	 * 
 	 * (Done) - Override toString() method to print account info.
 	 * (Done) - Maybe try writing test cases. 
 	 				* For withdrawal.
@@ -38,7 +39,32 @@ public class XYZDemo {
 			accounts.add(account);
 		}
 		
-		accounts.forEach((Account a) -> System.out.println(a));
+		//Displaying the account info.
+		accounts.forEach((Account account) -> System.out.println(account));
+		
+		System.out.println("------------------------------------");
+		System.out.println("\nDemo of Withdrawing 200 Rs\n");
+			//For each of the accounts, lets withdraw 200 Rs and view the account information.
+			accounts.forEach((Account account) -> {
+				System.out.println(String.format("Account Number:: %d", account.getAccountNumber()));
+				System.out.println(String.format("Previous Balance:: %d", account.getBalance()));
+				account.withdraw(200);
+				System.out.println(String.format("Balance after withdrawal:: %d", account.getBalance()));
+				System.out.println("------------------------------------");
+			});
+		
+		System.out.println("------------------------------------");
+		System.out.println("\nDemo of Deposit 500 Rs\n");
+			//For each of the accounts, lets deposit 500 Rs and view the account information.
+			accounts.forEach((Account account) -> {
+				
+				System.out.println(String.format("Account Number:: %d", account.getAccountNumber()));
+				System.out.println(String.format("Previous Balance:: %d", account.getBalance()));
+				account.deposit(500);
+				System.out.println(String.format("Balance after deposit:: %d", account.getBalance()));
+				System.out.println("------------------------------------");
+					});
+		//Error in withdrawal and deposit is shown in AccountActivityTest. Run that as a Junit test.
 	}
 
 }
