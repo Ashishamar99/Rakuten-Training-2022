@@ -44,3 +44,4 @@ hs_err_pid*
 *.xmi
 .DS_Store
 Module1Assessment/.DS_Store
+user-service/.mvn/wrapper/maven-wrapper.jar
