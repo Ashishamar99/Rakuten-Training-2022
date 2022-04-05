@@ -21,10 +21,11 @@ public class XYZDemo {
 	/*
 	 * Create a hashmap of account numbers (Keys) and accounts (Values) to access them.
 	 * Try out a logic for generating account numbers other than counters. (Maybe)
-	 * Override toString() method to print account info.
-	 * Maybe try writing test cases.
+	 * (Done) - Override toString() method to print account info.
+	 * (Done) - Maybe try writing test cases. 
 	 				* For withdrawal.
-	 				* For deposit (deposit negative amount) 
+	 				* For deposit (deposit negative amount)
+	 * Perform withdraw and deposit for each account under accounts.
 	 */
 	
 	public static void main(String[] args) {
