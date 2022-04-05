@@ -4,7 +4,6 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import xyz.operations.AccountActivity;
 
 public class TestDeposit extends InitialRequrements{
 
