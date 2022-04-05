@@ -24,7 +24,7 @@ hs_err_pid*
 
 
 # User Added Files
-**.metadata/
+**.metadata
 **.settings/
 .classpath
 **.plugins/
@@ -40,3 +40,5 @@ hs_err_pid*
 *.prefs
 *.xmi
 # **/assignments/
+*.snap
+*.xmi

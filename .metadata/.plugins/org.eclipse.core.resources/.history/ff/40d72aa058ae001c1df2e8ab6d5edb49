@@ -1,8 +1,0 @@
-
-public class Shop {
-	public static void main(String[] args) {
-		Book b1 = new Book();
-		b1.price = (float) 0.8;
-		System.out.println(b1.price);
-	}
-}
