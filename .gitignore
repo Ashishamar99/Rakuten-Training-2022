@@ -42,3 +42,5 @@ hs_err_pid*
 # **/assignments/
 *.snap
 *.xmi
+.DS_Store
+Module1Assessment/.DS_Store
