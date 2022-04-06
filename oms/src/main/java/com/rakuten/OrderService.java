@@ -11,8 +11,10 @@ public class OrderService {
 	List<Order> orders = new ArrayList<>();
 	
 	void save(Order order) {
-		System.out.println(order.getItem());
-		System.out.println(order.getPrice());
+		if(order.getPrice()<0) {
+			throw new IllegalArgumentException("Price can't be negative " + order.getPrice());
+		}
+		System.out.println(String.format("Order Item = %s\n Order Price = %d", order.getItem(), order.getPrice()));
 		orders.add(order);
 	}
 
