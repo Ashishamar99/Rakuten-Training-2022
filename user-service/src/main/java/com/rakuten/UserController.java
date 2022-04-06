@@ -29,9 +29,12 @@ public class UserController {
 		return users;
 	}
 	
-	@GetMapping("{name}")
+	@GetMapping("/name/{name}")
 	User getUserFromName(@PathVariable String name) {
-		System.out.println(name);
+		
+		if(name.isBlank() || name.isEmpty()) {
+			throw new IllegalArgumentException("Name cannot be empty");
+		}
 		
 //		users.forEach((User single_user) -> {
 //			if(single_user.getName().equals(name)) {
@@ -58,7 +61,9 @@ public class UserController {
 	
 	@GetMapping("age/{age}")
 	List<User> getUserFromAge(@PathVariable int age) {
-		System.out.println(age);
+		if(age<0) {
+			throw new IllegalArgumentException("Age cannot be negative " + age);
+		}
 		 List<User> filteredUsers = users.stream().filter((user)->user.getAge() == age).collect(Collectors.toList());
 		 return filteredUsers;
 		
