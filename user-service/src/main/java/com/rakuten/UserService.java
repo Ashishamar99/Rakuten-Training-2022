@@ -13,11 +13,8 @@ public class UserService {
 	@Autowired
 	UserRepository repository;
 	
-	List<User> users = new ArrayList<>();
-	
 	void save(User user) {
 		repository.save(user);
-		//users.add(user);
 		System.out.println("Save method called");
 	}
 	
@@ -27,7 +24,7 @@ public class UserService {
 			throw new IllegalArgumentException("Name cannot be empty");
 		}
 		
-		List<User> filteredUsers = users.stream().filter((user)->user.getName().equals(name)).collect(Collectors.toList());
+		List<User> filteredUsers = getAllUsers().stream().filter((user)->user.getName().equals(name)).collect(Collectors.toList());
 		return filteredUsers;
 		
 		//Try the same thing with for each loop. There's some error.
@@ -47,7 +44,7 @@ public class UserService {
 	}
 
 	public List<User> getAllUsers() {
-		return users;
+		return repository.findAll();
 	}
 
 	public List<User> getUserByAge(int age) {
@@ -55,7 +52,7 @@ public class UserService {
 		if(age<0) {
 			throw new IllegalArgumentException("Age cannot be negative " + age);
 		}
-		 List<User> filteredUsers = users.stream().filter((user)->user.getAge() == age).collect(Collectors.toList());
+		 List<User> filteredUsers = getAllUsers().stream().filter((user)->user.getAge() == age).collect(Collectors.toList());
 		 return filteredUsers;
 	}
 
