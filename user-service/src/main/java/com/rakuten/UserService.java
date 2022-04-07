@@ -4,15 +4,20 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service // This annotation tells the class to be treated as a service.
 public class UserService {
 	
+	@Autowired
+	UserRepository repository;
+	
 	List<User> users = new ArrayList<>();
 	
 	void save(User user) {
-		users.add(user);
+		repository.save(user);
+		//users.add(user);
 		System.out.println("Save method called");
 	}
 	
