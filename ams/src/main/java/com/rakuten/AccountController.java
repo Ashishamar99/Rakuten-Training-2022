@@ -1,8 +1,8 @@
 package com.rakuten;
 
-import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,18 +15,19 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/account")
 public class AccountController {
 	
-	List<Account> accounts = new ArrayList<>();
+	@Autowired
+	AccountService service;
 	
 	@PostMapping
 	@ResponseStatus(code = HttpStatus.CREATED)
 	void saveAccount(@RequestBody Account account) {
 		System.out.println(account);
-		accounts.add(account);
+		service.save(account);
 	}
 	
 	@GetMapping
 	List<Account> getAccounts(){
-		return accounts;
+		return service.getAllAccounts();
 	}
 
 }
