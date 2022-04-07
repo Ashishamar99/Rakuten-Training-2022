@@ -1,6 +1,5 @@
 package com.rakuten;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -13,9 +12,10 @@ public class UserService {
 	@Autowired
 	UserRepository repository;
 	
-	void save(User user) {
+	Integer save(User user) {
 		repository.save(user);
-		System.out.println("Save method called");
+		System.out.println("User saved in the repository.");
+		return user.getId();
 	}
 	
 	List<User> getUserByName(String name){

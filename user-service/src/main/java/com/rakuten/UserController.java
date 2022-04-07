@@ -1,8 +1,6 @@
 package com.rakuten;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -26,10 +24,9 @@ public class UserController {
 	
 	@PostMapping
 	@ResponseStatus(code = HttpStatus.CREATED) // will create a status code of 201 for POST which is universally accepted.
-	void saveUser(@RequestBody User user) {
-		System.out.println(user.getName());
-		System.out.println(user.getAge());
-		service.save(user);
+	Integer saveUser(@RequestBody User user) {
+		System.out.println(String.format("Received Name:: %s, Received Age:: %d", user.getName(), user.getAge()));
+		return service.save(user);
 	}
 	
 	@GetMapping
