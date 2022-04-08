@@ -1,5 +1,7 @@
 package com.rakuten;
 
+import java.math.BigInteger;
+
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.MongoId;
 
@@ -11,6 +13,15 @@ public class Order {
 	
 	private String item;
 	private float price;
+	private BigInteger contact;
+
+	public BigInteger getContact() {
+		return contact;
+	}
+
+	public void setContact(BigInteger contact) {
+		this.contact = contact;
+	}
 
 	public String getItem() {
 		return item;

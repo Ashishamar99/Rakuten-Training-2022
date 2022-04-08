@@ -20,7 +20,7 @@ public class OrderController {
 	@PostMapping
 	@ResponseStatus(code = HttpStatus.CREATED)
 	void saveOrder(@RequestBody Order order) {
-		System.out.println(String.format("Item name = %s, Item Price = %f", order.getItem(), order.getPrice()));
+		System.out.println(String.format("Item name = %s, Item Price = %f, Item Contact Number = %d", order.getItem(), order.getPrice(), order.getContact()));
 		service.save(order);
 	}
 	
