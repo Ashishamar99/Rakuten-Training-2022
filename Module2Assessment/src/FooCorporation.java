@@ -4,6 +4,7 @@ public class FooCorporation {
 		calculatePay(7.5, 35);
 		calculatePay(8.20, 47);
 		calculatePay(10.0, 73);
+		calculatePay(8.00, 41);
 	}
 
 	private static void calculatePay(double basePay, int hoursWorked) {
