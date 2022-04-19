@@ -13,6 +13,7 @@ public class OrderController {
 	@Autowired
 	OrderService orderService;
 	
+	@PostMapping
 	void createOrder(@RequestBody Order order) {
 		orderService.saveOrder(order);
 	}
