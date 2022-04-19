@@ -16,6 +16,9 @@ public class Order {
 	
 	private String name;
 	private Float price;
+	private Integer discount;
+	private Float discountedprice;
+	
 	public String getName() {
 		return name;
 	}
@@ -33,6 +36,18 @@ public class Order {
 	}
 	public void setPrice(Float price) {
 		this.price = price;
+	}
+	public Integer getDiscount() {
+		return discount;
+	}
+	public void setDiscount(Integer discount) {
+		this.discount = discount;
+	}
+	public Float getDiscountedprice() {
+		return discountedprice;
+	}
+	public void setDiscountedprice(Float discountedprice) {
+		this.discountedprice = discountedprice;
 	}
 	@Override
 	public String toString() {
