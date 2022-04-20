@@ -6,5 +6,4 @@ import org.springframework.stereotype.Component;
 @Component
 @Profile("qa")
 public class UserService {
-	
 }
