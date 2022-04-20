@@ -38,3 +38,5 @@ print('"\\r\\n" is used for a new line in Windows format whereas, just a "\\n" i
 txt = "\x48\x65\x6c\x6c\x6f"
 print(txt) 
 print('----')
+
+#Check out all these methods - https://www.w3schools.com/python/python_strings_methods.asp
