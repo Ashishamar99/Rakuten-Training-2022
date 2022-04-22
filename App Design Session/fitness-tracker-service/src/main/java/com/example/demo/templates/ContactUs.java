@@ -2,7 +2,19 @@ package com.example.demo.templates;
 
 import java.math.BigInteger;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "messages")
 public class ContactUs {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer id;
+	
 	private String name, message, email;
 	private BigInteger phone_number;
 	public String getName() {
@@ -28,6 +40,12 @@ public class ContactUs {
 	}
 	public void setPhone_number(BigInteger phone_number) {
 		this.phone_number = phone_number;
+	}
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
 	}
 	@Override
 	public String toString() {

@@ -20,6 +20,15 @@ public class ContactController {
 	@PostMapping
 	@ResponseStatus(code = HttpStatus.CREATED)
 	void sendMessage(@RequestBody ContactUs message) {
+		/*
+		 *Request Body ->
+		 * {
+			    "name": "Jim",
+			    "phone_number": 8526397412,
+			    "email": "jim@gmail.com",
+			    "message": "I would like to get similar services."
+			}
+		 */
 		contact_service.send(message);
 	}
 	
