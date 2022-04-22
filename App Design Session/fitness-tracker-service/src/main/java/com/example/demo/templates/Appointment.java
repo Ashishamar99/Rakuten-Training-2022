@@ -1,10 +1,6 @@
-package com.example.demo;
+package com.example.demo.templates;
 
 import java.util.HashMap;
-
-import com.example.demo.templates.Physiotherapist;
-import com.example.demo.templates.Trainer;
-import com.example.demo.templates.packageDetails;
 
 public class Appointment {
 	private Customer customer;
