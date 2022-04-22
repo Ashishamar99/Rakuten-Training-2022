@@ -20,11 +20,10 @@ public class AppointmentService {
 		return appointments;
 	}
 
-	//TODO: FIX THIS!!!!
 	public Appointment getAppointmentByCustomerName(String customer_name) {
-		for (Appointment appointment : appointments) {
-			if(appointment.getCustomer().getName().equals(customer_name)) {
-				return appointment;
+		for (Appointment app : appointments) {
+			if(app.getCustomer().getName().equals(customer_name)) {
+				return app;
 			}
 		}
 		return new Appointment();
