@@ -13,8 +13,8 @@ public class AppointmentController {
 	
 	@PostMapping("/create")
 	@ResponseStatus(code = HttpStatus.CREATED)
-	void makeAppointment(@RequestBody String s) {
-		
+	void makeAppointment(@RequestBody Appointment appointment) {
+		System.out.println(appointment);
 	}
 	
 }
