@@ -10,3 +10,18 @@
 		<a href="Resources/Pension Management System Plan.pdf">Initial Design</a>
 	<li>
 </ul>
+
+<hr />
+
+### General Information -
+<ul>
+	<li>
+		ProcessPensionMicroservice is running on port 8080.
+	</li>
+	<li>
+		PensionerDetailMicroservice is running on port 8081.
+	</li>
+	<li>
+		EurekaServer is running on port 8761.
+	</li>
+</ul>
