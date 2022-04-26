@@ -2,6 +2,7 @@ package com.demo;
 
 import java.math.BigInteger;
 
+import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,29 +11,19 @@ import javax.persistence.IdClass;
 import javax.persistence.Table;
 
 @Entity
-@IdClass(BookCompositeId.class)
 @Table(name = "Books")
 public class Book {
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Integer book_id;
-	@Id
-	private BigInteger author_contact;
+	@EmbeddedId
+	private BookCompositeId bookid;
 	
 	private String book_title, author_name;
 	
-	public Integer getBook_id() {
-		return book_id;
+	public BookCompositeId getBookid() {
+		return bookid;
 	}
-	public void setBook_id(Integer book_id) {
-		this.book_id = book_id;
-	}
-	public BigInteger getAuthor_contact() {
-		return author_contact;
-	}
-	public void setAuthor_contact(BigInteger author_contact) {
-		this.author_contact = author_contact;
+	public void setBookid(BookCompositeId bookid) {
+		this.bookid = bookid;
 	}
 	public String getBook_title() {
 		return book_title;
