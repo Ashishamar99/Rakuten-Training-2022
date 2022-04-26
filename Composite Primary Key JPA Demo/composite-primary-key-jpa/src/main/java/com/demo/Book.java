@@ -37,5 +37,13 @@ public class Book {
 	public void setAuthor_name(String author_name) {
 		this.author_name = author_name;
 	}
+	public Book() {
+	}
+	
+	public Book(BookCompositeId bookid, String book_title, String author_name) {
+		this.bookid = bookid;
+		this.book_title = book_title;
+		this.author_name = author_name;
+	}
 	
 }

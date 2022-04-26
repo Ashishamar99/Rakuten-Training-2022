@@ -10,13 +10,11 @@ import javax.persistence.GenerationType;
 @Embeddable
 public class BookCompositeId implements Serializable{
 	
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer book_id;
 	private BigInteger author_contact;
 	
 	
 	public BookCompositeId() {
-		super();
 	}
 
 
@@ -41,7 +39,6 @@ public class BookCompositeId implements Serializable{
 
 
 	public BookCompositeId(Integer book_id, BigInteger author_contact) {
-		super();
 		this.book_id = book_id;
 		this.author_contact = author_contact;
 	}
