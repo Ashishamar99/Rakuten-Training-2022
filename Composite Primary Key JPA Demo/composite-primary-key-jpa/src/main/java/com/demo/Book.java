@@ -2,10 +2,24 @@ package com.demo;
 
 import java.math.BigInteger;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.IdClass;
+import javax.persistence.Table;
+
+@Entity
+@IdClass(BookCompositeId.class)
+@Table(name = "Books")
 public class Book {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer book_id;
+	@Id
 	private BigInteger author_contact;
+	
 	private String book_title, author_name;
 	
 	public Integer getBook_id() {

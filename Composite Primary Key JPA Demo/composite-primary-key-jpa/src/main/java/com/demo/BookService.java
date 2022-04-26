@@ -3,17 +3,20 @@ package com.demo;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class BookService {
-	List<Book> books = new ArrayList<>();
+	
+	@Autowired
+	BookRepository library;
 	
 	void saveBook(Book book) {
-		books.add(book);
+		library.save(book);
 	}
 	
 	List<Book> getBooks(){
-		return books;
+		return library.findAll();
 	}
 }
