@@ -1,4 +1,4 @@
-package com.example.demo.entities;
+package com.rakuten.processpension.entities;
 
 public class PensionDetail {
 	private Double pension_amount;
