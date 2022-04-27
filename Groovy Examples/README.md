@@ -4,7 +4,7 @@ Notes -
 <ul>
 	<li>
 		<ol>
-			<h4> Support Links - </h4>
+			<h4> <u>Support Links -</u> </h4>
 			<li>
 				https://www.tutorialspoint.com/groovy/groovy_basic_syntax.htm
 				<br />
@@ -15,6 +15,7 @@ Notes -
 			</li>
 		</ol>
 	</li>
+	<hr />
 	<li> 
 		<img src="Screenshots/calling static method.png" />
 		If the method is defined as a static, we need not create an object to call it. [Same as java]
