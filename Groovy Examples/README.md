@@ -27,3 +27,43 @@ Notes -
 	</li>
 	<hr />
 </ul>
+
+<hr />
+
+#### Groovy development in STS -
+<ol>
+	<li>
+		<img src="Screenshots/Install plugin.png" />
+	</li>
+	<li>
+		<img src="Screenshots/install all features.png" />
+	</li>
+	<li>
+		Restart STS.
+	</li>
+	<li>
+		<img src="Screenshots/new groovy project.png" />
+	</li>
+	<li>
+		<img src="Screenshots/give it a name and click finish.png" />
+		Give the project a name and click finish.
+	</li>
+	<li>
+		<img src="Screenshots/creating a groovy type.png" />
+		Right click on src and just like how we create a java class, we have to create a groovy type.
+	</li>
+	<li>
+		<img src="Screenshots/groovy type.png" />
+		Give it a name and click finish.
+	</li>
+	<li>
+		After writing the code,
+		<img src="Screenshots/run in groovy console.png" />
+		Right click on the groovy type, go to run and choose "groovy console".
+	</li>
+	<li>
+		<img src="Screenshots/run groovy script.png" />
+		Groovy console will open up and in that, we have to right click and choose run to execute our code as a groovy script.
+	</li>
+</ol>
+<hr />
