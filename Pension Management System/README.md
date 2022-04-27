@@ -43,3 +43,7 @@
 		Run the API gateway and check if you can access the same using port 8989.
 	</li>
 </ol>
+
+<hr />
+
+### Postman's collection of requests is exported as a JSON and is located in the Resources folder. Import that in postman to send the requests.
