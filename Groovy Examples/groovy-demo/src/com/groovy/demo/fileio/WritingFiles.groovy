@@ -14,6 +14,7 @@ class WritingFiles {
 			new File(outputFileName + filename).withWriter { 
 				writer -> writer.writeLine("File name is $filename")
 			}
+		println("Done. Please run ReadingFiles for reading the newly written files.")
 		}
 	}
 	
