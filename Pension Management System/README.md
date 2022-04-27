@@ -30,9 +30,3 @@
 </ul>
 
 <hr />
-
-### Links - 
-https://github.dev/therahulsahu/lbj-java-training
-<br />
-https://github.com/Ashishamar99/Rakuten-Training-2022/blob/main/microservices-main/order-service/src/main/resources/application.yml
-<br />
