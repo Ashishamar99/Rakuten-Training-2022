@@ -1,5 +1,7 @@
 package com.groovy.demo.ranges
 
+import org.apache.ivy.core.module.descriptor.ExcludeRule
+
 import com.groovy.demo.input.TakeInput
 
 class RangeDemo {
@@ -30,5 +32,13 @@ class RangeDemo {
 		
 		//subList
 		println(newrange.subList(3, 6))
+		
+		//exclusive range
+		def exclusiveRange = 1..<20
+		println(exclusiveRange)
+		
+		//character range
+		def charRange = 'a'..'j'
+		println(charRange.toArray())
 	}
 }
