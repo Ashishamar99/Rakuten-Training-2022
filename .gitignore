@@ -47,3 +47,7 @@ Module1Assessment/.DS_Store
 user-service/.mvn/wrapper/maven-wrapper.jar
 
 banksystem/*
+**/spring-boot-kafka-app.zip_expanded/
+Kafka Demo/examples
+jdbc-demo/target/classes/META-INF/maven/com.rakuten/jdbc-demo/pom.properties
+Maven Proejcts/app1/target/classes/META-INF/maven/com.tata/app1/pom.properties
