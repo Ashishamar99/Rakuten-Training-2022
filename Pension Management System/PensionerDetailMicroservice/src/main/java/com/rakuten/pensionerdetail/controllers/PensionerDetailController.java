@@ -23,10 +23,13 @@ public class PensionerDetailController {
 	List<PensionerDetail> pensioners = new ArrayList<>();
 	
 	@GetMapping("/{aadhar_number}")
-	List<PensionerDetail> getPensionerDetail(@PathVariable String aadhar_number) {
+	PensionerDetail getPensionerDetail(@PathVariable String aadhar_number) {
 		
 		List<PensionerDetail> search_result = pensioners.stream().filter(saved_pensioner -> String.valueOf(saved_pensioner.getAadhar_number()).equals(aadhar_number)).collect(Collectors.toList());
-		return search_result;
+		if(search_result.size() != 0) {
+			return search_result.get(0);
+		}
+		return null;
 	}
 	
 	@PostMapping
