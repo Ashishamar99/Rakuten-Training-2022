@@ -4,7 +4,7 @@ Notes -
 <ul>
 	<li>
 		<ol>
-			#### Support Links -
+			<h4> Support Links - </h4>
 			<li>
 				https://www.tutorialspoint.com/groovy/groovy_basic_syntax.htm
 				<br />
@@ -19,8 +19,10 @@ Notes -
 		<img src="Screenshots/calling static method.png" />
 		If the method is defined as a static, we need not create an object to call it. [Same as java]
 	</li>
+	<hr />
 	<li>
 		<img src="Screenshots/using object to access method.png" />
 		Here, we are using an object of class Example to call the sum() method which is not static. [Same as java]
 	</li>
+	<hr />
 </ul>
