@@ -30,3 +30,16 @@
 </ul>
 
 <hr />
+
+### Steps to run -
+<ol>
+	<li>
+		Run the eureka server application.
+	</li>
+	<li>
+		Run the services. Check if they are running properly.
+	</li>
+	<li>
+		Run the API gateway and check if you can access the same using port 8989.
+	</li>
+</ol>
