@@ -1,0 +1,1 @@
+Default content = output.txt if this works, we can use php syntax for string formatting!!
