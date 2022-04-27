@@ -8,7 +8,7 @@
 	</li>
 	<li>
 		<a href="Resources/Pension Management System Plan.pdf">Initial Design</a>
-	<li>
+	</li>
 </ul>
 
 <hr />
