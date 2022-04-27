@@ -14,12 +14,22 @@ class WritingFiles {
 			new File(outputFileName + filename).withWriter { 
 				writer -> writer.writeLine("File name is $filename")
 			}
-		println("Done. Please run ReadingFiles for reading the newly written files.")
+		println("New Files Created !!!.")
+		println("--------------------------------------------------")
 		}
 	}
 	
 	static void main(String[] args) {
+		
+		def fileOutputOfWriteFileDemo = "src/com/groovy/demo/fileio/"
+		def defaultTextFile = "output.txt"
+		def otherTextFile = "nananana.txt"
+		
 		WriteToFile()
-		WriteToFile("nananana.txt")
+		WriteToFile(otherTextFile)
+		
+		println("Invoking read functions on the newly written files...")
+		ReadingFiles.ReadFileContentAsString(fileOutputOfWriteFileDemo + defaultTextFile)
+		ReadingFiles.ReadFileContentLineByLine(fileOutputOfWriteFileDemo + otherTextFile)
 	}
 }

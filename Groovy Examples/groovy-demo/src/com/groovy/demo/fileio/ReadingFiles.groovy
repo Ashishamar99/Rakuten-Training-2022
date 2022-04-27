@@ -2,7 +2,7 @@ package com.groovy.demo.fileio
 
 import java.nio.file.Path
 
-class ReadingFiles {
+public class ReadingFiles {
 	
 	static String defaultFileName = "src/com/groovy/demo/fileio/input.txt"
 	// File path specification answer -> https://stackoverflow.com/questions/19871955/java-io-filenotfoundexception-the-system-cannot-find-the-file-specified
@@ -19,14 +19,14 @@ class ReadingFiles {
 	}
 	
 	static void main(String[] args) {
-		def fileOutputOfWriteFileDemo = "src/com/groovy/demo/fileio/"
-		def defaultTextFile = "output.txt"
-		def otherTextFile = "nananana.txt"
+//		def fileOutputOfWriteFileDemo = "src/com/groovy/demo/fileio/"
+//		def defaultTextFile = "output.txt"
+//		def otherTextFile = "nananana.txt"
 		
 		ReadFileContentAsString()
 		ReadFileContentLineByLine()
 		
-		ReadFileContentAsString(fileOutputOfWriteFileDemo + defaultTextFile)
-		ReadFileContentLineByLine(fileOutputOfWriteFileDemo + otherTextFile)
+//		ReadFileContentAsString(fileOutputOfWriteFileDemo + defaultTextFile)
+//		ReadFileContentLineByLine(fileOutputOfWriteFileDemo + otherTextFile)
 	}
 }
