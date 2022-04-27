@@ -10,6 +10,14 @@ public class PensionerDetail {
 	private PensionClassification pension_type;
 	private BankDetail bank_detail;
 	
+	private PensionDetail pension_detail;
+	public PensionDetail getPension_detail() {
+		return pension_detail;
+	}
+	public void setPension_detail(PensionDetail pension_detail) {
+		this.pension_detail = pension_detail;
+	}
+	
 	public String getName() {
 		return name;
 	}
