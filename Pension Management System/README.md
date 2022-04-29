@@ -31,8 +31,19 @@
 
 <hr />
 
-### Links - 
-https://github.dev/therahulsahu/lbj-java-training
-<br />
-https://github.com/Ashishamar99/Rakuten-Training-2022/blob/main/microservices-main/order-service/src/main/resources/application.yml
-<br />
+### Steps to run -
+<ol>
+	<li>
+		Run the eureka server application.
+	</li>
+	<li>
+		Run the services. Check if they are running properly.
+	</li>
+	<li>
+		Run the API gateway and check if you can access the same using port 8989.
+	</li>
+</ol>
+
+<hr />
+
+### Postman's collection of requests is exported as a JSON and is located in the Resources folder. Import that in postman to send the requests.
