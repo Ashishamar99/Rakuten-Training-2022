@@ -43,4 +43,9 @@ public class OrderController {
 	Order getLatestOrder() {
 		return service.getLatestOrder();
 	}
+	
+	@GetMapping("fetchByCustomerId/{customer_id}")
+	List<Order> getOrdersByCustomerId(@PathVariable Integer customer_id){
+		return service.getAllOrdersByCustomerId(customer_id);
+	}
 }

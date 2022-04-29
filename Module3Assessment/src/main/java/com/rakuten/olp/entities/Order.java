@@ -18,10 +18,16 @@ public class Order {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 	
-	private Integer customerId;
-	private String storeName, customerName, customerEmail;
 	private Date orderDate;
 	private Long orderAmount;
+	
+	//Customer Data in Order.
+	private Integer customerId;
+	private String customerName, customerEmail;
+	
+	//Store Data in Order.
+	private Integer storeId;
+	private String storeName;
 	
 	@Column
 	@Enumerated(EnumType.STRING)
@@ -73,6 +79,12 @@ public class Order {
 	}
 	public void setOrderStatus(OrderStatus orderStatus) {
 		this.orderStatus = orderStatus;
+	}
+	public Integer getStoreId() {
+		return storeId;
+	}
+	public void setStoreId(Integer storeId) {
+		this.storeId = storeId;
 	}
 	
 	

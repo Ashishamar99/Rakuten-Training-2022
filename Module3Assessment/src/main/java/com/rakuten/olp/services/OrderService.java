@@ -32,5 +32,9 @@ public class OrderService {
 	public Order getLatestOrder() {
 		return repository.findFirstByOrderByIdDesc();
 	}
+
+	public List<Order> getAllOrdersByCustomerId(Integer customer_id) {
+		return repository.findAllBycustomerId(customer_id);
+	}
 	
 }
