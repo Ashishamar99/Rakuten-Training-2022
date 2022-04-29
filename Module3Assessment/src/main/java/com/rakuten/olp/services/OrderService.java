@@ -37,4 +37,8 @@ public class OrderService {
 		return repository.findAllBycustomerId(customer_id);
 	}
 	
+	public List<Order> getAllOrdersByStoreId(Integer store_id){
+		return repository.findAllBystoreId(store_id);	
+	}
+	
 }
