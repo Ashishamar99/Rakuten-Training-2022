@@ -25,12 +25,19 @@ public class AppointmentService {
 		return appointments;
 	}
 
-	public Appointment getAppointmentByCustomerName(String customer_name) {
-		for (Appointment app : appointments) {
-			if(app.getCustomer().getName().equals(customer_name)) {
-				return app;
-			}
-		}
-		return new Appointment();
+	public List<Appointment> getAppointmentByCustomerName(String customer_name) {
+		//		for (Appointment app : appointments) {
+		//			if(app.getCustomer().getName().equals(customer_name)) {
+		//				return app;
+		//			}
+		//		}
+		//		return new Appointment();
+		
+		//Using Streams instead of the above logic.
+		return appointments.stream().filter(app -> app.getCustomer().getName().equals(customer_name)).collect(Collectors.toList());
+	}
+
+	public List<Appointment> getAppointmentByCustomerEmail(String email) {
+		return appointments.stream().filter(app -> app.getCustomer().getEmail().equals(email)).collect(Collectors.toList());
 	}
 }

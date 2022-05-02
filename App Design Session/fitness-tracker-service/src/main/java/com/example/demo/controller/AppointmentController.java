@@ -35,9 +35,13 @@ public class AppointmentController {
 		return appointment_service.getAllAppointments();
 	}
 	
-	@GetMapping("/view/{name}")
-	Appointment fetchAppointmentByName(@PathVariable String name) {
+	@GetMapping("/view/name/{name}")
+	List<Appointment> fetchAppointmentByName(@PathVariable String name) {
 		return appointment_service.getAppointmentByCustomerName(name);
 	}
 	
+	@GetMapping("/view/email/{email}")
+	List<Appointment> fetchAppointmentByEmail(@PathVariable String email) {
+		return appointment_service.getAppointmentByCustomerEmail(email);
+	}
 }
