@@ -1,7 +1,5 @@
 package com.example.demo.entities;
 
-import java.util.HashMap;
-
 public class Appointment {
 	private Customer customer;
 	private Integer package_details_key;
@@ -43,7 +41,7 @@ public class Appointment {
 	}
 	@Override
 	public String toString() {
-		return String.format("Customer Details = \n %s \n Trainer Preference = %s \n Physio Preference = %s, Package Details = %s \n Duration in weeks = %d", this.getCustomer(), this.getTrainer_preference(), this.getPhysio_preference(), this.getpackageDetails(), this.getWeeks());
+		return String.format("Customer Details = \n %s \n Trainer Preference = %s \n Physio Preference = %s, \n Package Details = %s \n Duration in weeks = %d", this.getCustomer(), this.getTrainer_preference(), this.getPhysio_preference(), this.getpackageDetails(), this.getWeeks());
 	}
 	
 }

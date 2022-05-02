@@ -15,6 +15,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 
 @RestController
 @RequestMapping("/appointment")
@@ -26,7 +27,6 @@ public class AppointmentController {
 	@PostMapping("/create")
 	@ResponseStatus(code = HttpStatus.CREATED)
 	void makeAppointment(@RequestBody Appointment appointment) {
-		System.out.println(appointment);
 		appointment_service.createAppointment(appointment);
 	}
 	
