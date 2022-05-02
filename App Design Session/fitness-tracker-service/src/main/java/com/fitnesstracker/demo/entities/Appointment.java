@@ -1,6 +1,4 @@
-package com.example.demo.templates;
-
-import java.util.HashMap;
+package com.fitnesstracker.demo.entities;
 
 public class Appointment {
 	private Customer customer;
@@ -43,7 +41,7 @@ public class Appointment {
 	}
 	@Override
 	public String toString() {
-		return String.format("Customer Details = \n %s \n Trainer Preference = %s \n Physio Preference = %s, Package Details = %s \n Duration in weeks = %d", this.getCustomer(), this.getTrainer_preference(), this.getPhysio_preference(), this.getpackageDetails(), this.getWeeks());
+		return String.format("Customer Details = \n %s \n Trainer Preference = %s \n Physio Preference = %s, \n Package Details = %s \n Duration in weeks = %d", this.getCustomer(), this.getTrainer_preference(), this.getPhysio_preference(), this.getpackageDetails(), this.getWeeks());
 	}
 	
 }
