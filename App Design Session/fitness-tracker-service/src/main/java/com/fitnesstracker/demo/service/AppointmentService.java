@@ -1,4 +1,4 @@
-package com.example.demo.service;
+package com.fitnesstracker.demo.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.entities.Appointment;
+import com.fitnesstracker.demo.entities.Appointment;
 
 @Service
 public class AppointmentService {

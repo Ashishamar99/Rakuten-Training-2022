@@ -1,4 +1,4 @@
-package com.example.demo.entities;
+package com.fitnesstracker.demo.entities;
 
 public enum Physiotherapist {
 	YES, NO

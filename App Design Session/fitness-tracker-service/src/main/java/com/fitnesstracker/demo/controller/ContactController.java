@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.fitnesstracker.demo.controller;
 
 import java.util.List;
 
@@ -9,10 +9,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.http.HttpStatus;
 
-import com.example.demo.entities.ContactUs;
-import com.example.demo.service.ContactService;
+import com.fitnesstracker.demo.entities.ContactUs;
+import com.fitnesstracker.demo.service.ContactService;
+
+import org.springframework.http.HttpStatus;
 
 @RestController
 @RequestMapping("/contact")

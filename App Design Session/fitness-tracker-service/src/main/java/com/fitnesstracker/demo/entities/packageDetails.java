@@ -1,4 +1,4 @@
-package com.example.demo.entities;
+package com.fitnesstracker.demo.entities;
 
 import java.util.HashMap;
 import java.util.Map;

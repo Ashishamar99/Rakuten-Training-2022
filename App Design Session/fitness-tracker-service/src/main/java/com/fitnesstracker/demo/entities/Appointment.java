@@ -1,12 +1,4 @@
-package com.example.demo.entities;
-
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+package com.fitnesstracker.demo.entities;
 
 public class Appointment {
 	private Customer customer;
