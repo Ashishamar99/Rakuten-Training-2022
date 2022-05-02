@@ -1,4 +1,4 @@
-package com.example.demo.templates;
+package com.example.demo.entities;
 
 import java.util.HashMap;
 

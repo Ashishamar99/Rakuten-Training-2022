@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.demo.entities.Appointment;
 import com.example.demo.service.AppointmentService;
-import com.example.demo.templates.Appointment;
 
 import java.util.List;
 

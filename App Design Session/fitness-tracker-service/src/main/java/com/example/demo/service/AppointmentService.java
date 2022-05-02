@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.example.demo.templates.Appointment;
+import com.example.demo.entities.Appointment;
 
 @Service
 public class AppointmentService {

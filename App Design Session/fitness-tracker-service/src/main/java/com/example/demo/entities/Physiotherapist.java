@@ -1,4 +1,4 @@
-package com.example.demo.templates;
+package com.example.demo.entities;
 
 public enum Physiotherapist {
 	YES, NO

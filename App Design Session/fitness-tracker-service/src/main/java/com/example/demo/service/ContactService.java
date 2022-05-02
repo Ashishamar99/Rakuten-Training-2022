@@ -3,8 +3,8 @@ package com.example.demo.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.demo.entities.ContactUs;
 import com.example.demo.repositories.ContactRepository;
-import com.example.demo.templates.ContactUs;
 
 @Service
 public class ContactService {
