@@ -1,5 +1,7 @@
 package com.example.demo.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +17,10 @@ public class ContactService {
 	public void send(ContactUs message) {
 		contact_repository.save(message);
 		
+	}
+
+	public List<ContactUs> getAllContacts() {
+		return contact_repository.findAll();
 	}
 
 }
