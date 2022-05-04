@@ -36,9 +36,17 @@ public class Customer {
 	public void setAge(Integer age) {
 		this.age = age;
 	}
+	public Customer(String name, String address, String email, BigInteger mobile, Integer age) {
+		super();
+		this.name = name;
+		this.address = address;
+		this.email = email;
+		this.mobile = mobile;
+		this.age = age;
+	}
 	@Override
 	public String toString() {
-		return String.format("Name = %s \n Age = %d \n Mobile = %s \n Email = %s \n Address = %s \n", this.getName(), this.getAge(), this.getMobile(), this.getEmail(), this.getAddress());
+		return String.format("Name = %s,Age = %d,Mobile = %s,Email = %s,Address = %s", this.getName(), this.getAge(), this.getMobile(), this.getEmail(), this.getAddress());
 	}
 	
 }
