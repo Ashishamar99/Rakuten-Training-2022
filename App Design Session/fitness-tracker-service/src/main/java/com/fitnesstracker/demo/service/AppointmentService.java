@@ -1,5 +1,6 @@
 package com.fitnesstracker.demo.service;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -17,18 +18,15 @@ public class AppointmentService {
 	
 	@Autowired
 	AppointmentRepository appointmentRepository;
+	List<Appointment> appointments;
 	
 	public void createAppointment(Appointment appointment) {
-		String customerString = convertCustomerToString(appointment.getCustomer());
+		String customerString = appointment.getCustomer().toString();
 		appointment.setCustomerData(customerString);
 		if(appointment.getPackage_details_key() == 1) {
 			appointment.setWeeks(0);
 		}
 		appointmentRepository.save(appointment);
-	}
-
-	private String convertCustomerToString(Customer customer) {
-		return customer.toString();
 	}
 
 	public List<Appointment> getAllAppointments() {
@@ -44,10 +42,30 @@ public class AppointmentService {
 		//		return new Appointment();
 		
 		//Using Streams instead of the above logic.
-		return appointmentRepository.findAll().stream().filter(app -> app.getCustomer().getName().equals(customer_name)).collect(Collectors.toList());
+		appointments = setCustomerEntityFromData(appointments);
+		return appointments.stream().filter(app -> app.getCustomer().getName().equals(customer_name)).collect(Collectors.toList());
 	}
 
 	public List<Appointment> getAppointmentByCustomerEmail(String email) {
-		return appointmentRepository.findAll().stream().filter(app -> app.getCustomer().getEmail().equals(email)).collect(Collectors.toList());
+		setCustomerEntityFromData(appointments);
+		return appointments.stream().filter(app -> app.getCustomer().getEmail().equals(email)).collect(Collectors.toList());
+	}
+	
+	private List<Appointment> setCustomerEntityFromData(List<Appointment> fetchedAppointments){
+		fetchedAppointments = appointmentRepository.findAll();
+		
+		fetchedAppointments.forEach(singleAppointment -> {
+			String[] dataToProcess = singleAppointment.getCustomerData().split(",");
+			
+			String name = dataToProcess[0].split("=")[1].trim();
+			int age = Integer.valueOf(dataToProcess[1].split("=")[1].trim());
+			BigInteger mobile = new BigInteger(dataToProcess[2].split("=")[1].trim());
+			String email = dataToProcess[3].split("=")[1].trim();
+			String address = dataToProcess[4].split("=")[1].trim();
+			
+			singleAppointment.setCustomer(new Customer(name, address, email, mobile, age));
+		});
+		
+		return fetchedAppointments;
 	}
 }
