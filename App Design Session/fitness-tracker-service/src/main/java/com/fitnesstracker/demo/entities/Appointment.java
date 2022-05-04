@@ -1,11 +1,43 @@
 package com.fitnesstracker.demo.entities;
 
-public class Appointment {
-	private Customer customer;
+import java.io.Serializable;
+import java.sql.Blob;
+
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Transient;
+
+
+@Entity
+@Table(name = "appointments")
+public class Appointment{
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer id;
+	
+	@Transient
+	private Customer customer; 
+	//using this annotation "transient" to ignore this member while creating the db.
+	//https://www.baeldung.com/jpa-transient-ignore-field
+	
+	private String customerData;
+	
 	private Integer package_details_key;
+	
+	@Enumerated(EnumType.STRING)
 	private Trainer trainer_preference;
+	
+	@Enumerated(EnumType.STRING)
 	private Physiotherapist physio_preference;
+	
 	private Integer weeks;
+	
+	
 	public Customer getCustomer() {
 		return customer;
 	}
@@ -38,6 +70,18 @@ public class Appointment {
 	}
 	public String getpackageDetails() {
 		return packageDetails.package_details.get(this.getPackage_details_key());
+	}
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public String getCustomerData() {
+		return customerData;
+	}
+	public void setCustomerData(String customerData) {
+		this.customerData = customerData;
 	}
 	@Override
 	public String toString() {
