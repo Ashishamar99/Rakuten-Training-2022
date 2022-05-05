@@ -16,7 +16,7 @@ import com.fitnesstracker.demo.service.ContactService;
 import org.springframework.http.HttpStatus;
 
 @RestController
-@RequestMapping("/contact")
+@RequestMapping("/api/v1.0/fitnesstracker/contacts")
 public class ContactController {
 	
 	@Autowired

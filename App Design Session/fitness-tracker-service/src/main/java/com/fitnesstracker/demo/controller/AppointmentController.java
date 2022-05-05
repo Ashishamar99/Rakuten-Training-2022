@@ -20,34 +20,35 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
 @RestController
-@RequestMapping("/appointment")
+@RequestMapping("/api/v1.0/fitnesstracker/appointments")
 public class AppointmentController {
 	
 	@Autowired
 	AppointmentService appointment_service;
 	
-	@PostMapping("/create")
+	@PostMapping
 	@ResponseStatus(code = HttpStatus.CREATED)
 	void makeAppointment(@RequestBody Appointment appointment) {
 		appointment_service.createAppointment(appointment);
 	}
 	
-	@GetMapping("/view")
+	@GetMapping
 	List<Appointment> fetchAllAppointments(){
 		return appointment_service.getAllAppointments();
 	}
 	
-	@GetMapping("/view/name/{name}")
+	//Additional end point, can use it too.
+	@GetMapping("/view/{name}")
 	List<Appointment> fetchAppointmentByName(@PathVariable String name) {
 		return appointment_service.getAppointmentByCustomerName(name);
 	}
 	
-	@GetMapping("/view/email/{email}")
+	@GetMapping("/{email}")
 	List<Appointment> fetchAppointmentByEmail(@PathVariable String email) {
 		return appointment_service.getAppointmentByCustomerEmail(email);
 	}
 	
-	@DeleteMapping("/delete/{id}")
+	@DeleteMapping("/{id}")
 	@ResponseStatus(code = HttpStatus.CREATED)
 	void deleteAppointmentById(@PathVariable Integer id) {
 		appointment_service.deleteAppointmentById(id);
