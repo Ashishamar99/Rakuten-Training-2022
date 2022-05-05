@@ -3,6 +3,7 @@ package com.fitnesstracker.demo.service;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -67,5 +68,15 @@ public class AppointmentService {
 		});
 		
 		return fetchedAppointments;
+	}
+
+	public void deleteAppointmentById(Integer id) {
+		appointmentRepository.deleteById(id);
+	}
+
+	public void updateAppointmentById(Appointment updatedAppointment, Integer id) {
+		appointmentRepository.deleteById(id);
+		appointmentRepository.save(updatedAppointment);
+		
 	}
 }
