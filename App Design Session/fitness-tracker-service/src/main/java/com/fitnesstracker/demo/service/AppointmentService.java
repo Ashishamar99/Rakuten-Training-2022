@@ -1,10 +1,16 @@
 package com.fitnesstracker.demo.service;
 
+import java.beans.FeatureDescriptor;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.BeanWrapper;
+import org.springframework.beans.BeanWrapperImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -12,12 +18,14 @@ import org.springframework.stereotype.Service;
 import com.fitnesstracker.demo.entities.Appointment;
 import com.fitnesstracker.demo.entities.Customer;
 import com.fitnesstracker.demo.repositories.AppointmentRepository;
+import com.fitnesstracker.demo.tools.PersistenceUtils;
 
 @Service
 public class AppointmentService {
 	
 	@Autowired
 	AppointmentRepository appointmentRepository;
+	
 	List<Appointment> appointments;
 	
 	public void createAppointment(Appointment appointment) {
@@ -67,5 +75,25 @@ public class AppointmentService {
 		});
 		
 		return fetchedAppointments;
+	}
+
+	public void deleteAppointmentById(Integer id) {
+		appointmentRepository.deleteById(id);
+	}
+
+	public void updateAppointmentById(Appointment updatedAppointment, Integer id) {
+		
+		//The below commented code, shows optional, partial updation of the json. 
+		//Grabbed from --> https://stackoverflow.com/questions/52424734/basic-put-update-on-spring-boot
+		
+//		Optional<Appointment> myAppointment = appointmentRepository.findById(id);
+//		updatedAppointment = (Appointment) PersistenceUtils.partialUpdate(myAppointment.get(), updatedAppointment);
+//		appointmentRepository.save(updatedAppointment);
+		
+		
+		System.out.println(updatedAppointment);
+		updatedAppointment.setId(id);
+		appointmentRepository.save(updatedAppointment);
+		
 	}
 }

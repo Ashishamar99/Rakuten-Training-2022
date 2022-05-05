@@ -3,6 +3,7 @@ package com.fitnesstracker.demo.entities;
 import java.io.Serializable;
 import java.sql.Blob;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -85,6 +86,7 @@ public class Appointment{
 	}
 	@Override
 	public String toString() {
+		setCustomerData(customer.toString()); // Since we are passing a json value for new details, we will be setting it right here.
 		return String.format("Customer Details = \n %s \n Trainer Preference = %s \n Physio Preference = %s, \n Package Details = %s \n Duration in weeks = %d", this.getCustomer(), this.getTrainer_preference(), this.getPhysio_preference(), this.getpackageDetails(), this.getWeeks());
 	}
 	
