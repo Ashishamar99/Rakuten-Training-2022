@@ -1,0 +1,239 @@
+{
+	"info": {
+		"_postman_id": "9783d65a-7e4a-4e95-8bf9-12a250e50683",
+		"name": "fitness-tracker-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "send-a-message",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Jim\",\n\t\"phone_number\": 8526397412,\n\t\"email\": \"jim@gmail.com\",\n\t\"message\": \"I would like to get similar services.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1.0/fitnesstracker/contacts",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1.0",
+						"fitnesstracker",
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-appointment-package-1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customer\":{\n        \"name\": \"Jim\",\n        \"address\": \"#87, 8th Main, 8th Cross, Banashankari, Bengaluru - 560050, Karnataka, India\",\n        \"email\": \"jim@gmail.com\",\n        \"mobile\": 8123456789,\n        \"age\": 36\n    },\n    \"package_details_key\": 1,\n    \"trainer_preference\": \"NO_PREFERENCE\",\n    \"physio_preference\": \"YES\",\n    \"weeks\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1.0/fitnesstracker/appointments",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1.0",
+						"fitnesstracker",
+						"appointments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-appointment-package-2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customer\":{\n        \"name\": \"Dwight\",\n        \"address\": \"#87, 8th Main, 8th Cross, Banashankari, Bengaluru - 560050, Karnataka, India\",\n        \"email\": \"dwight@gmail.com\",\n        \"mobile\": 9456123789,\n        \"age\": 30\n    },\n    \"package_details_key\": 2,\n    \"trainer_preference\": \"MALE\",\n    \"physio_preference\": \"YES\",\n    \"weeks\": 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1.0/fitnesstracker/appointments",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1.0",
+						"fitnesstracker",
+						"appointments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view-all-appointments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1.0/fitnesstracker/appointments",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1.0",
+						"fitnesstracker",
+						"appointments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetch-appointments-by-name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1.0/fitnesstracker/appointments/view/Dwight",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1.0",
+						"fitnesstracker",
+						"appointments",
+						"view",
+						"Dwight"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-all-contacts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1.0/fitnesstracker/contacts",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1.0",
+						"fitnesstracker",
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetch-appointments-by-email",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1.0/fitnesstracker/appointments/jimbo@gmail.com",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1.0",
+						"fitnesstracker",
+						"appointments",
+						"jimbo@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-appointment-by-id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1.0/fitnesstracker/appointments/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1.0",
+						"fitnesstracker",
+						"appointments",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-appointment",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customer\":{\n        \"name\": \"Jimbo\",\n        \"address\": \"#87, 8th Main, 8th Cross, Banashankari, Bengaluru - 560050, Karnataka, India\",\n        \"email\": \"jimbo@gmail.com\",\n        \"mobile\": 8123456789,\n        \"age\": 36\n    },\n    \"package_details_key\": 2,\n    \"trainer_preference\": \"NO_PREFERENCE\",\n    \"physio_preference\": \"YES\",\n    \"weeks\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1.0/fitnesstracker/appointments/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1.0",
+						"fitnesstracker",
+						"appointments",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
