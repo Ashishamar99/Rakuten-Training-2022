@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.fitnesstracker.demo.entities.Appointment;
+import com.fitnesstracker.demo.mapper.AppointmentMapper;
 import com.fitnesstracker.demo.service.AppointmentService;
 
 import java.util.List;

@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import com.fitnesstracker.demo.entities.Appointment;
 import com.fitnesstracker.demo.entities.Customer;
+import com.fitnesstracker.demo.mapper.AppointmentMapper;
 import com.fitnesstracker.demo.repositories.AppointmentRepository;
 
 @Service
@@ -75,7 +76,8 @@ public class AppointmentService {
 	}
 
 	public void updateAppointmentById(Appointment updatedAppointment, Integer id) {
-		appointmentRepository.deleteById(id);
+		Optional<Appointment> myAppointment = appointmentRepository.findById(id);
+		AppointmentMapper.updateAppointmentFromDTO(updatedAppointment, myAppointment);
 		appointmentRepository.save(updatedAppointment);
 		
 	}
