@@ -11,8 +11,9 @@ import org.springframework.web.client.RestTemplate;
 
 import com.rakuten.workouttracker.entities.Category;
 import com.rakuten.workouttracker.entities.Workout;
-import com.rakuten.workouttracker.exceptions.CategoryNotFoundException;
 import com.rakuten.workouttracker.repositories.WorkoutRepository;
+import com.rakuten.workouttracker.userdefined.exceptions.CategoryNotFoundException;
+import com.rakuten.workouttracker.userdefined.tools.PersistenceUtils;
 
 @Service
 public class WorkoutService {
@@ -58,9 +59,11 @@ public class WorkoutService {
 		workoutRepository.deleteById(id);
 	}
 
-	public void updateWorkoutFromId(Integer id, Workout workout) {
-		workout.setId(id);
-		workoutRepository.save(workout);
+	public void updateWorkoutFromId(Integer id, Workout updatedWorkout) {
+		// Tried a bit with partial updation of workout JSON. --> https://github.com/Ashishamar99/Rakuten-Training-2022/blob/1b29b7d06c7c3192bafc3fd955251d69e5344bf1/App%20Design%20Session/fitness-tracker-service/src/main/java/com/fitnesstracker/demo/service/AppointmentService.java#L59-L73
+		Optional<Workout> currentWorkout = workoutRepository.findById(id);
+		updatedWorkout = (Workout) PersistenceUtils.partialUpdate(currentWorkout.get(), updatedWorkout);
+		workoutRepository.save(updatedWorkout);
 		
 	}
 	
