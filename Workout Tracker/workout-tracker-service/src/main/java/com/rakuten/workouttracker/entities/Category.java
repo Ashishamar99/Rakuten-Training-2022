@@ -1,5 +1,13 @@
 package com.rakuten.workouttracker.entities;
 
-public enum Category {
-	WALKING, SQUATS, RUNNING, SITTING_STILL, BADMINTON 
+public class Category {
+	private String name;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
 }
