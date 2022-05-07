@@ -1,4 +1,4 @@
-package com.rakuten.workouttracker.exceptions;
+package com.rakuten.workouttracker.userdefined.exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

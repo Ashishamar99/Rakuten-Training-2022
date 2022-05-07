@@ -18,8 +18,8 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.rakuten.workouttracker.entities.Workout;
-import com.rakuten.workouttracker.exceptions.CategoryNotFoundException;
 import com.rakuten.workouttracker.services.WorkoutService;
+import com.rakuten.workouttracker.userdefined.exceptions.CategoryNotFoundException;
 
 @RestController
 @RequestMapping("/workout")
