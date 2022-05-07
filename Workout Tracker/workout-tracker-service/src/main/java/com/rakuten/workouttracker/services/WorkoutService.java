@@ -2,6 +2,7 @@ package com.rakuten.workouttracker.services;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -27,7 +28,7 @@ public class WorkoutService {
 	}
 
 	public void addWorkout(Workout workout) {
-		//https://www.baeldung.com/spring-rest-template-list
+		//Fetching category names from category end point, solved using this link --> https://www.baeldung.com/spring-rest-template-list
 		ResponseEntity<Category[]> response = restTemplate.getForEntity("http://localhost:8080/category", Category[].class);
 		Category[] categoriesList = response.getBody();
 		Boolean categoryFound = false;
@@ -47,6 +48,20 @@ public class WorkoutService {
 		else {
 			throw new CategoryNotFoundException();
 		}
+	}
+
+	public Optional<Workout> fetchWorkoutById(Integer id) {
+		return workoutRepository.findById(id);
+	}
+
+	public void deleteWorkoutById(Integer id) {
+		workoutRepository.deleteById(id);
+	}
+
+	public void updateWorkoutFromId(Integer id, Workout workout) {
+		workout.setId(id);
+		workoutRepository.save(workout);
+		
 	}
 	
 	

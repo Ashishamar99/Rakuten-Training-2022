@@ -10,6 +10,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "categories")
 @SequenceGenerator(name="PRIVATE_SEQ", sequenceName="private_sequence")
+//Both tables were sharing the id generation numbers, solved using this link. --> https://stackoverflow.com/questions/6878093/issue-with-sequence-why-two-entity-are-sharing-the-same-sequence-when-generating
 public class Category {
 	
 	@Id
