@@ -66,6 +66,10 @@ public class WorkoutService {
 		workoutRepository.save(updatedWorkout);
 		
 	}
+
+	public List<Workout> fetchAllWorkoutsOfSameCategory(String category) {
+		return workoutRepository.findAllBycategory(category);
+	}
 	
 	
 }
