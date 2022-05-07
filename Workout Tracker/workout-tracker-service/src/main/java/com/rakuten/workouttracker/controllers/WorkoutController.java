@@ -1,8 +1,8 @@
 package com.rakuten.workouttracker.controllers;
 
-import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,37 +12,26 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.rakuten.workouttracker.entities.Category;
 import com.rakuten.workouttracker.entities.Workout;
 import com.rakuten.workouttracker.exceptions.CategoryNotFoundException;
+import com.rakuten.workouttracker.services.WorkoutService;
 
 @RestController
 @RequestMapping("/workout")
 public class WorkoutController {
 	
-	List<Workout> workouts = new ArrayList<>();
+	@Autowired
+	WorkoutService workoutService;
 	
 	@GetMapping
 	List<Workout> getAllWorkouts(){
-		return workouts;
+		return workoutService.fetchAllWorkouts();
 	}
 	
 	@PostMapping
 	@ResponseStatus(code = HttpStatus.CREATED)
 	void saveWorkout(@RequestBody Workout workout) {
-		if(CategoryController.categories.size() != 0) {
-			CategoryController.categories.forEach(category -> {
-				if(category.getName().equals(workout.getCategory())) {
-					workouts.add(workout);
-				}
-				else {
-					 throw new CategoryNotFoundException();
-				}
-			});
-		}
-		else {
-			throw new CategoryNotFoundException();
-		}
+		workoutService.addWorkout(workout);
 	}
 	
 	@ExceptionHandler(CategoryNotFoundException.class)
