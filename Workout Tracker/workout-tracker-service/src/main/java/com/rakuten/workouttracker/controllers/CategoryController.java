@@ -29,5 +29,10 @@ public class CategoryController {
 	void saveCategory(@RequestBody Category category) {
 		categoryService.addCategory(category);
 	}
+	
+	@PostMapping("/saveMultipleCategoriesAtOnce")
+	void saveCategories(@RequestBody List<Category> listOfCategories) {
+		categoryService.addMultipleCategories(listOfCategories);
+	}
 
 }
