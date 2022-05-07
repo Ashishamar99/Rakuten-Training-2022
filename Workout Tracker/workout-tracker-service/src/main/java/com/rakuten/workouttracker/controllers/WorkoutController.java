@@ -1,12 +1,17 @@
 package com.rakuten.workouttracker.controllers;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -33,6 +38,27 @@ public class WorkoutController {
 	void saveWorkout(@RequestBody Workout workout) {
 		workoutService.addWorkout(workout);
 	}
+	
+	@PutMapping("/{id}")
+	@ResponseStatus(code = HttpStatus.CREATED)
+	void updateWorkoutById(@PathVariable Integer id, @RequestBody Workout workout) {
+		workoutService.updateWorkoutFromId(id, workout);
+	}
+	
+	@GetMapping("/{id}")
+	Optional<Workout> getWorkoutById(@PathVariable Integer id) {
+		return workoutService.fetchWorkoutById(id);
+	}
+	
+	@DeleteMapping("/{id}")
+	@ResponseStatus(code = HttpStatus.ACCEPTED)
+	void removeWorkoutById(@PathVariable Integer id) {
+		workoutService.deleteWorkoutById(id);
+	}
+	
+	@ExceptionHandler(EmptyResultDataAccessException.class)
+	@ResponseStatus(code = HttpStatus.NOT_FOUND)
+	void handleDeleteInvalidWorkout() { }
 	
 	@ExceptionHandler(CategoryNotFoundException.class)
 	@ResponseStatus(code = HttpStatus.NOT_ACCEPTABLE)
