@@ -7,12 +7,12 @@ import java.util.stream.Stream;
 
 public class CategoryWithCalories {
 	
-	public static Map<Category, Double> categoryAndCalories = Stream.of(new Object[][] { 
-	     {Category.WALKING, 0.37}, 
-	     {Category.BADMINTON, 0.44},
-	     {Category.RUNNING, 0.115},
-	     {Category.SITTING_STILL, 0.009},
-	     {Category.SQUATS, 0.96}
-	 }).collect(Collectors.toMap(data -> (Category) data[0], data -> (Double) data[1]));
+	public static Map<CategoryEnum, Double> categoryAndCalories = Stream.of(new Object[][] { 
+	     {CategoryEnum.WALKING, 0.37},
+	     {CategoryEnum.BADMINTON, 0.44},
+	     {CategoryEnum.RUNNING, 0.115},
+	     {CategoryEnum.SITTING_STILL, 0.009},
+	     {CategoryEnum.SQUATS, 0.96}
+	 }).collect(Collectors.toMap(data -> (CategoryEnum) data[0], data -> (Double) data[1]));
 
 }
