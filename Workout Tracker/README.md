@@ -6,6 +6,9 @@
 	<li>
 		<a href="Resources/Summative assessment- BE track- Use case.pdf">Use Case PDF.</a>
 	</li>
+	<li>
+		<a href="Resources/workout-tracker-app.postman_collection.json">Import this JSON as a collection in POSTMAN to view the requests.</a>
+	</li>
 </ul>
 <hr />
 

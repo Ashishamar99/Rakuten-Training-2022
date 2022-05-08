@@ -1,0 +1,339 @@
+{
+	"info": {
+		"_postman_id": "b64857d4-1715-4561-a59e-9e7e45d3e2ae",
+		"name": "workout-tracker-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "add-a-workout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"note\": \"walking for sometime\",\n    \"title\": \"30 mins walking\",\n    \"category\": \"Walking\",\n    \"calories_burnt\": 0.37\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/workout",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"workout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-a-category",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Jogging\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/category/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"category",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-a-workout",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"note\": \"squats for sometime\",\n    \"title\": \"5 mins squatting\",\n    \"category\": \"Squats\",\n    \"calories_burnt\": 0.96\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/workout/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"workout",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find-workout-by-id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/workout/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"workout",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find-workout-by-category",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/workout/search/?category=Walking",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"workout",
+						"search",
+						""
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "Walking"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find-category-by-id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/category/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"category",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-a-category-by-id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/category/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"category",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-a-workout-by-id Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/workout/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"workout",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view-all-workouts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/workout",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"workout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view-all-categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/category",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add-a-category",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Jogging\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/category",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add-multiple-categories",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"name\": \"Walking\"\n    },\n    {\n        \"name\": \"Badminton\"\n    },\n    {\n        \"name\": \"Running\"\n    },\n    {\n        \"name\": \"Sitting Still\"\n    },\n    {\n        \"name\": \"Squats\"\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/category/saveMultipleCategoriesAtOnce",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"category",
+						"saveMultipleCategoriesAtOnce"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
