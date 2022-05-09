@@ -67,7 +67,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"note\": \"squats for sometime\",\n    \"title\": \"5 mins squatting\",\n    \"category\": \"Squats\",\n    \"calories_burnt\": 0.96\n}",
+					"raw": "{\n    \"note\": \"squats for sometime\",\n    \"title\": \"5 mins squatting\",\n    \"category\": \"Squats\",\n    \"calories_burnt\": 0.96,\n    \"end_time\": \"15:54:48\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -330,6 +330,46 @@
 					"path": [
 						"category",
 						"saveMultipleCategoriesAtOnce"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "start-a-workout",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/workout/start/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"workout",
+						"start",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "end-a-workout",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/workout/end/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"workout",
+						"end",
+						"1"
 					]
 				}
 			},
