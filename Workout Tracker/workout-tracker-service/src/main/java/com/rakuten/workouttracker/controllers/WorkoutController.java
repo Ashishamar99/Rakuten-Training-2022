@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.rakuten.workouttracker.entities.Workout;
 import com.rakuten.workouttracker.services.WorkoutService;
 import com.rakuten.workouttracker.userdefined.exceptions.CategoryNotFoundException;
+import com.rakuten.workouttracker.userdefined.exceptions.WorkoutNotFoundException;
 
 @RestController
 @RequestMapping("/workout")
@@ -62,6 +63,17 @@ public class WorkoutController {
 		return workoutService.fetchAllWorkoutsOfSameCategory(category);
 	}
 	
+	@GetMapping("/start/{id}")
+	@ResponseStatus(code = HttpStatus.ACCEPTED)
+	void startWorkout(@PathVariable Integer id) {
+		workoutService.startWorkoutFromId(id);
+	}
+	
+	@GetMapping("/end/{id}")
+	@ResponseStatus(code = HttpStatus.ACCEPTED)
+	void endWorkout(@PathVariable Integer id) {
+		workoutService.endWorkoutFromId(id);
+	}
 	@ExceptionHandler(EmptyResultDataAccessException.class)
 	@ResponseStatus(code = HttpStatus.NOT_FOUND)
 	void handleDeleteInvalidWorkout() { }
@@ -75,6 +87,12 @@ public class WorkoutController {
 		 * https://stackoverflow.com/questions/24292373/spring-boot-rest-controller-how-to-return-different-http-status-codes
 		 * https://www.baeldung.com/exception-handling-for-rest-with-spring
 		 */
+		return exception.toString();
+	}
+	
+	@ExceptionHandler(WorkoutNotFoundException.class)
+	@ResponseStatus(code = HttpStatus.NOT_ACCEPTABLE)
+	public String handleWorkoutNotFoundException(WorkoutNotFoundException exception) {
 		return exception.toString();
 	}
 }
