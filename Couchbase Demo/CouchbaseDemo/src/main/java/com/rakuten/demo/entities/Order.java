@@ -7,13 +7,13 @@ import org.springframework.data.couchbase.core.mapping.Field;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Document
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-@EqualsAndHashCode
+@Getter
+@Setter
 public class Order {
 	@Id
 	private Integer id;
