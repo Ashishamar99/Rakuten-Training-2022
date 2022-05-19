@@ -30,7 +30,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"item_name\": \"Chocolates\",\n    \"price\": 20\n}",
+					"raw": "{\n    \"id\": 110,\n    \"item_name\": \"Chocolates\",\n    \"price\": 20\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -85,14 +85,14 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8081/orders/5868bf35-08a4-47fd-a5b6-ec401ca537f6",
+					"raw": "localhost:8081/orders/110",
 					"host": [
 						"localhost"
 					],
 					"port": "8081",
 					"path": [
 						"orders",
-						"5868bf35-08a4-47fd-a5b6-ec401ca537f6"
+						"110"
 					]
 				}
 			},
@@ -104,7 +104,7 @@
 				"method": "PATCH",
 				"header": [],
 				"url": {
-					"raw": "localhost:8081/orders/name/5868bf35-08a4-47fd-a5b6-ec401ca537f6?name=Pen",
+					"raw": "localhost:8081/orders/name/110?name=Pen",
 					"host": [
 						"localhost"
 					],
@@ -112,7 +112,7 @@
 					"path": [
 						"orders",
 						"name",
-						"5868bf35-08a4-47fd-a5b6-ec401ca537f6"
+						"110"
 					],
 					"query": [
 						{
@@ -130,7 +130,7 @@
 				"method": "PATCH",
 				"header": [],
 				"url": {
-					"raw": "localhost:8081/orders/price/5868bf35-08a4-47fd-a5b6-ec401ca537f6?price=30.5",
+					"raw": "localhost:8081/orders/price/110?price=30.5",
 					"host": [
 						"localhost"
 					],
@@ -138,7 +138,7 @@
 					"path": [
 						"orders",
 						"price",
-						"5868bf35-08a4-47fd-a5b6-ec401ca537f6"
+						"110"
 					],
 					"query": [
 						{
@@ -179,7 +179,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8081/orders/search/5868bf35-08a4-47fd-a5b6-ec401ca537f6",
+					"raw": "localhost:8081/orders/search/110",
 					"host": [
 						"localhost"
 					],
@@ -187,7 +187,7 @@
 					"path": [
 						"orders",
 						"search",
-						"5868bf35-08a4-47fd-a5b6-ec401ca537f6"
+						"110"
 					]
 				}
 			},

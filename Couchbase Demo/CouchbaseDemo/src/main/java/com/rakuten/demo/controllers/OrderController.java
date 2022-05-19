@@ -33,7 +33,7 @@ public class OrderController {
 	
 	@GetMapping("/search/{id}")
 	@ResponseStatus(code = HttpStatus.FOUND)
-	public Order getOrdersById(@PathVariable String id) {
+	public Order getOrdersById(@PathVariable Integer id) {
 		return orderService.getAllOrdersById(id);
 	}
 	
@@ -51,7 +51,7 @@ public class OrderController {
 	
 	@DeleteMapping("/{id}")
 	@ResponseStatus(code = HttpStatus.ACCEPTED)
-	public void deleteOrderFromId(@PathVariable String id) {
+	public void deleteOrderFromId(@PathVariable Integer id) {
 		orderService.deleteById(id);
 	}
 	
@@ -63,19 +63,19 @@ public class OrderController {
 	
 	@PutMapping("/{id}")
 	@ResponseStatus(code = HttpStatus.ACCEPTED)
-	public void updateOrder(@PathVariable String id, @RequestBody Order order) {
+	public void updateOrder(@PathVariable Integer id, @RequestBody Order order) {
 		orderService.updateOrderFromId(id, order);
 	}
 	
 	@PatchMapping("/name/{id}")
 	@ResponseStatus(code = HttpStatus.ACCEPTED)
-	public void updateOrderName(@PathVariable String id, @RequestParam String name) {
+	public void updateOrderName(@PathVariable Integer id, @RequestParam String name) {
 		orderService.updateOrderName(id, name);
 	}
 	
 	@PatchMapping("/price/{id}")
 	@ResponseStatus(code = HttpStatus.ACCEPTED)
-	public void updateOrderPrice(@PathVariable String id, @RequestParam Double price) {
+	public void updateOrderPrice(@PathVariable Integer id, @RequestParam Double price) {
 		orderService.updateOrderPrice(id, price);
 	}
 }
