@@ -2,6 +2,7 @@ package com.rakuten.demo.services;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
@@ -27,6 +28,59 @@ public class OrderService {
 
 	public void deleteAll() {
 		orderRepository.deleteAll();
+	}
+
+	public void updateOrderFromId(String id, Order order) {
+		order.setId(id);
+		orderRepository.save(order);
+	}
+
+	public void updateOrderName(String id, String name) {
+		Optional<Order> searchResult = orderRepository.findById(id);
+		if(searchResult.isPresent()) {
+			Order myOrder = searchResult.get();
+			myOrder.setId(id);
+			myOrder.setItem_name(name);
+			orderRepository.save(myOrder);
+		}
+		
+		else {
+			throw new IllegalArgumentException("Whup! Order Not Found. Please Check The Id.");
+		}
+		
+	}
+
+	public void updateOrderPrice(String id, Double price) {
+		Optional<Order> searchResult = orderRepository.findById(id);
+		if(searchResult.isPresent()) {
+			Order myOrder = searchResult.get();
+			myOrder.setId(id);
+			myOrder.setPrice(price);
+			orderRepository.save(myOrder);
+		}
+		else {
+			throw new IllegalArgumentException("Whup! Order Not Found. Please Check The Id.");
+		}
+		
+	}
+
+	public void deleteById(String id) {
+		if(orderRepository.findById(id).isPresent()) {
+			orderRepository.deleteById(id);
+		}
+		else {
+			throw new IllegalArgumentException("Whup! Order Not Found. Please Check The Id.");
+		}
+	}
+
+	public Order getAllOrdersById(String id) {
+		Optional<Order> searchResult = orderRepository.findById(id);
+		if(searchResult.isPresent()) {
+			return searchResult.get();
+		}
+		else {
+			throw new IllegalArgumentException("Whup! Order Not Found. Please Check The Id.");
+		}
 	}
 
 }

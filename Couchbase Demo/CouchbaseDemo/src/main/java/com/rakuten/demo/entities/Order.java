@@ -28,7 +28,15 @@ public class Order {
 //	@Setter
 	private String item_name;
 	
-//  @Field("Price")
+public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	//  @Field("Price")
 //	@Getter
 //	@Setter
 	private Double price;
