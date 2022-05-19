@@ -6,39 +6,24 @@ import org.springframework.data.couchbase.core.mapping.Field;
 import org.springframework.data.couchbase.core.mapping.id.GeneratedValue;
 import org.springframework.data.couchbase.core.mapping.id.GenerationStrategy;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
 @Document
-@Getter
-@Setter
-public class Order {
-//	@Getter
-//	@Setter
+public class OrderWithoutLombok {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationStrategy.UNIQUE)
-	private String id;
+	@Field("my_id")
+	@GeneratedValue(strategy = GenerationStrategy.USE_ATTRIBUTES)
+	private Integer id;
 	
-//	@Getter
-//	@Setter
 	private String item_name;
 	
-//  @Field("Price")
-//	@Getter
-//	@Setter
 	private Double price;
 
-	public Double getPrice() {
-		return price;
+	public Integer getMyid() {
+		return id;
 	}
 
-	public void setPrice(Double price) {
-		this.price = price;
+	public void setMyid(Integer myid) {
+		this.id = myid;
 	}
 
 	public String getItem_name() {
@@ -47,5 +32,13 @@ public class Order {
 
 	public void setItem_name(String item_name) {
 		this.item_name = item_name;
+	}
+
+	public Double getPrice() {
+		return price;
+	}
+
+	public void setPrice(Double price) {
+		this.price = price;
 	}
 }
