@@ -1,0 +1,197 @@
+{
+	"info": {
+		"_postman_id": "c83b4b7c-4474-4f45-9073-87cd53b632fb",
+		"name": "couchbase-demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAllOrders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/orders",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveOrder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"item_name\": \"Chocolates\",\n    \"price\": 20\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/orders/",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"orders",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteAllOrders",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/orders/",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"orders",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateOrderById",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"item_name\": \"Shampoo\",\n    \"price\": 200\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/orders/5868bf35-08a4-47fd-a5b6-ec401ca537f6",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"orders",
+						"5868bf35-08a4-47fd-a5b6-ec401ca537f6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateItemNameById",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/orders/name/5868bf35-08a4-47fd-a5b6-ec401ca537f6?name=Pen",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"orders",
+						"name",
+						"5868bf35-08a4-47fd-a5b6-ec401ca537f6"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Pen"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatePriceById",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/orders/price/5868bf35-08a4-47fd-a5b6-ec401ca537f6?price=30.5",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"orders",
+						"price",
+						"5868bf35-08a4-47fd-a5b6-ec401ca537f6"
+					],
+					"query": [
+						{
+							"key": "price",
+							"value": "30.5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteOrderById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8081/orders/ea99e735-9415-4b8d-ac31-38e0a31bec0b",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"orders",
+						"ea99e735-9415-4b8d-ac31-38e0a31bec0b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getOrderById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/orders/search/5868bf35-08a4-47fd-a5b6-ec401ca537f6",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"orders",
+						"search",
+						"5868bf35-08a4-47fd-a5b6-ec401ca537f6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
