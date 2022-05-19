@@ -30,12 +30,18 @@ public class OrderService {
 		orderRepository.deleteAll();
 	}
 
-	public void updateOrderFromId(String id, Order order) {
-		order.setId(id);
-		orderRepository.save(order);
+	public void updateOrderFromId(Integer id, Order order) {
+		Optional<Order> searchResult = orderRepository.findById(id);
+		if(searchResult.isPresent()) {
+			order.setId(id);
+			orderRepository.save(order);
+		}
+		else {
+			throw new IllegalArgumentException("Whup! Order Not Found. Please Check The Id.");
+		}
 	}
 
-	public void updateOrderName(String id, String name) {
+	public void updateOrderName(Integer id, String name) {
 		Optional<Order> searchResult = orderRepository.findById(id);
 		if(searchResult.isPresent()) {
 			Order myOrder = searchResult.get();
@@ -50,7 +56,7 @@ public class OrderService {
 		
 	}
 
-	public void updateOrderPrice(String id, Double price) {
+	public void updateOrderPrice(Integer id, Double price) {
 		Optional<Order> searchResult = orderRepository.findById(id);
 		if(searchResult.isPresent()) {
 			Order myOrder = searchResult.get();
@@ -64,7 +70,7 @@ public class OrderService {
 		
 	}
 
-	public void deleteById(String id) {
+	public void deleteById(Integer id) {
 		if(orderRepository.findById(id).isPresent()) {
 			orderRepository.deleteById(id);
 		}
@@ -73,7 +79,7 @@ public class OrderService {
 		}
 	}
 
-	public Order getAllOrdersById(String id) {
+	public Order getAllOrdersById(Integer id) {
 		Optional<Order> searchResult = orderRepository.findById(id);
 		if(searchResult.isPresent()) {
 			return searchResult.get();

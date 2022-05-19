@@ -5,6 +5,7 @@ import org.springframework.data.couchbase.core.mapping.Document;
 import org.springframework.data.couchbase.core.mapping.Field;
 import org.springframework.data.couchbase.core.mapping.id.GeneratedValue;
 import org.springframework.data.couchbase.core.mapping.id.GenerationStrategy;
+import javax.annotation.*;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,18 +22,17 @@ public class Order {
 //	@Setter
 	
 	@Id
-	@GeneratedValue(strategy = GenerationStrategy.UNIQUE)
-	private String id;
+	private Integer id;
 	
 //	@Getter
 //	@Setter
 	private String item_name;
 	
-public String getId() {
+public Integer getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
