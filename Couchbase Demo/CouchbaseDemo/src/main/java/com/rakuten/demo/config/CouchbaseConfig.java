@@ -29,5 +29,5 @@ public class CouchbaseConfig extends AbstractCouchbaseConfiguration{
 		// TODO Auto-generated method stub
 		return "OrderBucket";
 	}
-
+	
 }

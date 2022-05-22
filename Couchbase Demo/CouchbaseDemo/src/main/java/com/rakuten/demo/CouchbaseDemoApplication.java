@@ -20,7 +20,6 @@ import com.rakuten.demo.entities.Order;
 import com.rakuten.demo.repositories.OrderRepository;
 
 @SpringBootApplication
-//@SpringBootApplication(scanBasePackages = {"com.rakuten.demo.repositories"})
 public class CouchbaseDemoApplication {
 
 	public static void main(String[] args) {
