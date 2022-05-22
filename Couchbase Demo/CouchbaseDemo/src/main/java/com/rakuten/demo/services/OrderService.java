@@ -31,7 +31,6 @@ public class OrderService {
 	}
 
 	public void saveOrder(Order order) {
-		System.out.println(order.toString());
 		orderRepository.save(order);
 		
 	}

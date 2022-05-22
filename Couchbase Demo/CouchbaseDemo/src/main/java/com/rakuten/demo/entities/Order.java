@@ -17,14 +17,7 @@ import lombok.ToString;
 
 @Document
 @Data
-@ToString
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
 public class Order {
-//	@Getter
-//	@Setter
 	
 	@Id
 	@GeneratedValue(strategy = GenerationStrategy.UNIQUE)
