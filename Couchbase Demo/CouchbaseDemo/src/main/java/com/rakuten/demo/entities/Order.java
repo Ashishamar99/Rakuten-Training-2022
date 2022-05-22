@@ -13,47 +13,23 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 @Document
+@Data
+@ToString
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Order {
 //	@Getter
 //	@Setter
 	
 	@Id
-	private Integer id;
+	@GeneratedValue(strategy = GenerationStrategy.UNIQUE)
+	private String id;
 	
-//	@Getter
-//	@Setter
 	private String item_name;
-	
-public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
-	//  @Field("Price")
-//	@Getter
-//	@Setter
 	private Double price;
-
-	public Double getPrice() {
-		return price;
-	}
-
-	public void setPrice(Double price) {
-		this.price = price;
-	}
-
-	public String getItem_name() {
-		return item_name;
-	}
-
-	public void setItem_name(String item_name) {
-		this.item_name = item_name;
-	}
 }

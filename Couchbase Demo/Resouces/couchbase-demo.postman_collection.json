@@ -11,13 +11,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8081/orders",
+					"raw": "localhost:8081/orders/",
 					"host": [
 						"localhost"
 					],
 					"port": "8081",
 					"path": [
-						"orders"
+						"orders",
+						""
 					]
 				}
 			},
@@ -30,7 +31,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"id\": 110,\n    \"item_name\": \"Chocolates\",\n    \"price\": 20\n}",
+					"raw": "{\n    \"item_name\": \"Chocolates\",\n    \"price\": 20.9\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -85,14 +86,14 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8081/orders/110",
+					"raw": "localhost:8081/orders/591fa82f-293b-483f-8db2-8a5053f3f97e",
 					"host": [
 						"localhost"
 					],
 					"port": "8081",
 					"path": [
 						"orders",
-						"110"
+						"591fa82f-293b-483f-8db2-8a5053f3f97e"
 					]
 				}
 			},
@@ -104,7 +105,7 @@
 				"method": "PATCH",
 				"header": [],
 				"url": {
-					"raw": "localhost:8081/orders/name/110?name=Pen",
+					"raw": "localhost:8081/orders/name/1267d4fc-534b-49bf-b3dc-cbecc36738c9?name=Pen",
 					"host": [
 						"localhost"
 					],
@@ -112,7 +113,7 @@
 					"path": [
 						"orders",
 						"name",
-						"110"
+						"1267d4fc-534b-49bf-b3dc-cbecc36738c9"
 					],
 					"query": [
 						{
@@ -130,7 +131,7 @@
 				"method": "PATCH",
 				"header": [],
 				"url": {
-					"raw": "localhost:8081/orders/price/110?price=30.5",
+					"raw": "localhost:8081/orders/price/1267d4fc-534b-49bf-b3dc-cbecc36738c9?price=30.5",
 					"host": [
 						"localhost"
 					],
@@ -138,7 +139,7 @@
 					"path": [
 						"orders",
 						"price",
-						"110"
+						"1267d4fc-534b-49bf-b3dc-cbecc36738c9"
 					],
 					"query": [
 						{
@@ -188,6 +189,26 @@
 						"orders",
 						"search",
 						"110"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getOrderById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/orders/search/591fa82f-293b-483f-8db2-8a5053f3f97e",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"orders",
+						"search",
+						"591fa82f-293b-483f-8db2-8a5053f3f97e"
 					]
 				}
 			},

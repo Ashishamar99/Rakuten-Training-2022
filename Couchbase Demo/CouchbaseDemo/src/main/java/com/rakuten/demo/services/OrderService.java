@@ -8,12 +8,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Service;
 
+import com.couchbase.client.java.BinaryCollection;
+import com.couchbase.client.java.Bucket;
+import com.couchbase.client.java.Cluster;
+import com.couchbase.client.java.Collection;
+import com.couchbase.client.java.kv.GetResult;
 import com.rakuten.demo.entities.Order;
 import com.rakuten.demo.repositories.OrderRepository;
 
+import lombok.Lombok;
+
+
+
 @Service
 public class OrderService {
-	
+
 	@Autowired
 	OrderRepository orderRepository;
 	
@@ -22,6 +31,7 @@ public class OrderService {
 	}
 
 	public void saveOrder(Order order) {
+		System.out.println(order.toString());
 		orderRepository.save(order);
 		
 	}
@@ -30,7 +40,7 @@ public class OrderService {
 		orderRepository.deleteAll();
 	}
 
-	public void updateOrderFromId(Integer id, Order order) {
+	public void updateOrderFromId(String id, Order order) {
 		Optional<Order> searchResult = orderRepository.findById(id);
 		if(searchResult.isPresent()) {
 			order.setId(id);
@@ -41,7 +51,7 @@ public class OrderService {
 		}
 	}
 
-	public void updateOrderName(Integer id, String name) {
+	public void updateOrderName(String id, String name) {
 		Optional<Order> searchResult = orderRepository.findById(id);
 		if(searchResult.isPresent()) {
 			Order myOrder = searchResult.get();
@@ -56,7 +66,7 @@ public class OrderService {
 		
 	}
 
-	public void updateOrderPrice(Integer id, Double price) {
+	public void updateOrderPrice(String id, Double price) {
 		Optional<Order> searchResult = orderRepository.findById(id);
 		if(searchResult.isPresent()) {
 			Order myOrder = searchResult.get();
@@ -70,7 +80,7 @@ public class OrderService {
 		
 	}
 
-	public void deleteById(Integer id) {
+	public void deleteById(String id) {
 		if(orderRepository.findById(id).isPresent()) {
 			orderRepository.deleteById(id);
 		}
@@ -79,7 +89,7 @@ public class OrderService {
 		}
 	}
 
-	public Order getAllOrdersById(Integer id) {
+	public Order getAllOrdersById(String id) {
 		Optional<Order> searchResult = orderRepository.findById(id);
 		if(searchResult.isPresent()) {
 			return searchResult.get();
