@@ -35,6 +35,7 @@ public class OrderController {
 	@GetMapping("/search/{id}")
 	@ResponseStatus(code = HttpStatus.FOUND)
 	public Order getOrdersById(@PathVariable String id) {
+		System.out.println(orderService.getAllOrdersById(id));
 		return orderService.getAllOrdersById(id);
 	}
 	
